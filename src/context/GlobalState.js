@@ -2,7 +2,7 @@ import React, { createContext, useReducer, useEffect } from 'react';
 
 const initialState = {
     watchlist: localStorage.getItem( 'watchlist' ) ? JSON.parse( localStorage.getItem( 'watchlist' ) ) : [],
-    watched: []
+    watched: localStorage.getItem( 'watched' ) ? JSON.parse( localStorage.getItem( 'watched' ) ) : []
 };
 
 //initial movie reducer for do actions
@@ -42,6 +42,7 @@ export const GlobalProvider = ( props ) => {
     //save locall storage
     useEffect( () => {
         localStorage.setItem( "watchlist", JSON.stringify( state.watchlist ) );
+        localStorage.setItem( "watched", JSON.stringify( state.watched ) );
     }, [state] );
 
     return (

@@ -38,7 +38,7 @@ const HomePage = () => {
 
             <div className="movie-card-wrapper">
                 <div className="movie-number">
-                    <h4>فیلم پیدا شده : <span>{movies.length === 0 ? 'جستجو نشده' : movies.length}</span></h4>
+                    <h4>تعداد فیلم ها : <span>{movies.length === 0 ? 'جستجو کنید' : movies.length}</span></h4>
                 </div>
                 {movies && movies.map( ( movie ) => (
                     <HomeMovieCard movie={movie} key={movie.id} />
