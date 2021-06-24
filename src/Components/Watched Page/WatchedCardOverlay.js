@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaEye, FaTimes } from 'react-icons/fa';
 
-const CardOverlay = ( { movie } ) => {
+const WatchedCardOverlay = ( { movie } ) => {
     return (
         <div className="card-overlay">
             <h3 className="overlay-name">{movie.title}</h3>
@@ -17,4 +17,4 @@ const CardOverlay = ( { movie } ) => {
     );
 }
 
-export default CardOverlay;
+export default WatchedCardOverlay;

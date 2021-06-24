@@ -4,6 +4,7 @@ import { GlobalProvider } from "./context/GlobalState";
 import Navbar from './Components/Navbar'
 import HomePage from "./Components/Home page/HomePage";
 import WatchListPage from "./Components/WatchList Page/WatchListPage";
+import WatchedPage from './Components/Watched Page/WatchedPage'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
           <Navbar />
           <Switch>
             <Route path="/" exact component={HomePage} />
-            <Route path="/watchlist" exact component={WatchListPage} />
+            <Route path="/watchlist" component={WatchListPage} />
+            <Route path="/watched" component={WatchedPage} />
           </Switch>
         </div>
       </Router>

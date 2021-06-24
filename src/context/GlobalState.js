@@ -20,6 +20,12 @@ const movieReducer = ( state, action ) => {
                 watched: [action.payload, ...state.watched]
             };
 
+        case "DELETE_MOVIE_FROM_WATCHLIST":
+            return {
+                ...state,
+                watchlist: state.watchlist.filter( ( movie ) => movie.id !== action.payload )
+            };
+
         default: return state
     }
 }
@@ -39,6 +45,10 @@ export const GlobalProvider = ( props ) => {
         dispatch( { type: "ADD_MOVIE_TO_WATCHED", payload: movie } );
     }
 
+    const deleteMovieFromWatchlist = ( id ) => {
+        dispatch( { type: "DELETE_MOVIE_FROM_WATCHLIST", payload: id } );
+    }
+
     //save locall storage
     useEffect( () => {
         localStorage.setItem( "watchlist", JSON.stringify( state.watchlist ) );
@@ -50,7 +60,8 @@ export const GlobalProvider = ( props ) => {
             addMovieToWatchlist,
             watchlist: state.watchlist,
             addMovieToWatched,
-            watched: state.watched
+            watched: state.watched,
+            deleteMovieFromWatchlist
         }}>
             {props.children}
         </GlobalState.Provider>

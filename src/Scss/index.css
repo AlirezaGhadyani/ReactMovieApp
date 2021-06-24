@@ -366,7 +366,8 @@ header {
           box-shadow: 2px 2px 10px #3535356e;
 }
 
-.watchlist-card-wrapper {
+.watchlist-card-wrapper,
+.watched-card-wrapper {
   width: 1200px;
   max-width: 95%;
   display: -ms-grid;
@@ -377,7 +378,8 @@ header {
   margin: 2rem 0;
 }
 
-.watchlist-card {
+.watchlist-card,
+.watched-card {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -393,7 +395,8 @@ header {
           box-shadow: -4px -4px 10px #00000046;
 }
 
-.watchlist-card-img {
+.watchlist-card-img,
+.watched-card-img {
   width: 100%;
 }
 

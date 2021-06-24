@@ -1,6 +1,6 @@
 import React from 'react';
 import UnknownImage from "../../Assets/Images/UnknownMovie.jpg";
-import CardOverlay from './CardOverlay';
+import WatchlistCardOverlay from './WatchlistCardOverlay';
 
 const WatchListCard = ( { movie } ) => {
     return (
@@ -11,7 +11,7 @@ const WatchListCard = ( { movie } ) => {
                 <img src={UnknownImage} alt="poster for movies has no poster" className="watchlist-card-img" />
             )}
 
-            <CardOverlay movie={movie} />
+            <WatchlistCardOverlay movie={movie} />
         </div>
     );
 };

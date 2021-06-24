@@ -5,12 +5,11 @@ import WatchListCard from './WatchListCard'
 const WatchListPage = () => {
     //useContext
     const { watchlist } = useContext( GlobalState );
-    console.log( watchlist )
 
     return (
         <div className="watchlist-card-wrapper">
             {watchlist.length > 0 ? watchlist.map( ( movie ) => (
-                <WatchListCard movie={movie} />
+                <WatchListCard movie={movie} key={movie.id} />
             ) ) : (
                 <div className="watchlist-message">
                     <h2>فیلمی برای تماشا اضافه نکردید!</h2>
