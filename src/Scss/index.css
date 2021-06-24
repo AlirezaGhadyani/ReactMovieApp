@@ -202,7 +202,7 @@ header {
   width: 1200px;
   max-width: 95%;
   font-size: 1.8rem;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 1rem;
   border: 0;
   background: #ffffff70;
   -webkit-backdrop-filter: blur(3px);
@@ -233,6 +233,13 @@ header {
   font-size: 1.6rem;
   font-weight: 700;
   color: #353535;
+}
+
+.movie-number {
+  padding: 2rem 0;
+  font-family: faFont;
+  font-size: 1.6rem;
+  font-weight: 800;
 }
 
 .movie-card-wrapper {

@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import UnknownImage from "../../Assets/Images/UnknownMovie.jpg";
+import { GlobalState } from '../../context/GlobalState';
 
 const HomeMovieCard = ( { movie } ) => {
+    //use cuntext
+    const { addMovieToWatchlist, watchlist, addMovieToWatched, watched } = useContext( GlobalState );
+
+    //find those movies has added to lists ones
+    const watchlistExistMovie = watchlist.find( ( watchlistMovie ) => watchlistMovie.id === movie.id );
+    const watchedExistMovie = watched.find( ( watchedMovie ) => watchedMovie.id === movie.id );
 
     return (
         <div className="movie-card">
@@ -16,8 +23,18 @@ const HomeMovieCard = ( { movie } ) => {
                     <span className="movie-date">{movie.release_date ? movie.release_date.substr( 0, 4 ) : '-'}</span>
                 </div>
                 <div className="movie-button">
-                    <button className="btn-primary">افزودن به لیست</button>
-                    <button className="btn-primary">دیده شد</button>
+                    <button
+                        className="btn-primary"
+                        onClick={() => addMovieToWatchlist( movie )}
+                        disabled={watchlistExistMovie || watchedExistMovie ? true : false}>
+                        افزودن به لیست
+                    </button>
+                    <button
+                        className="btn-primary"
+                        onClick={() => addMovieToWatched( movie )}
+                        disabled={watchedExistMovie || watchlistExistMovie ? true : false}>
+                        دیده شده
+                    </button>
                 </div>
             </div>
         </div>
