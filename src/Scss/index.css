@@ -353,6 +353,11 @@ header {
   transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
 }
 
+.btn-active {
+  background-color: #353535;
+  color: #f4f4f4;
+}
+
 .btn-primary:first-child {
   margin-right: 0;
 }

@@ -24,13 +24,13 @@ const HomeMovieCard = ( { movie } ) => {
                 </div>
                 <div className="movie-button">
                     <button
-                        className="btn-primary"
+                        className={watchlistExistMovie ? 'btn-primary btn-active' : 'btn-primary'}
                         onClick={() => addMovieToWatchlist( movie )}
                         disabled={watchlistExistMovie || watchedExistMovie ? true : false}>
                         افزودن به لیست
                     </button>
                     <button
-                        className="btn-primary"
+                        className={watchedExistMovie ? 'btn-primary btn-active' : 'btn-primary'}
                         onClick={() => addMovieToWatched( movie )}
                         disabled={watchedExistMovie || watchlistExistMovie ? true : false}>
                         دیده شده
