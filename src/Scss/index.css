@@ -436,7 +436,8 @@ header {
   text-align: center;
 }
 
-.watchlist-card:hover .card-overlay {
+.watchlist-card:hover .card-overlay,
+.watched-card:hover .card-overlay {
   opacity: 1;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;

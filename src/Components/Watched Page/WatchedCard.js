@@ -1,6 +1,6 @@
 import React from 'react';
 import UnknownImage from "../../Assets/Images/UnknownMovie.jpg";
-import WatchedCardOverlay from './WatchedCardOverlay';
+import WatchedCardOverlay from './WatchedCardOverlay'
 
 const WatchedCard = ( { movie } ) => {
     return (
