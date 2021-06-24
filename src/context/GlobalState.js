@@ -1,7 +1,7 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 
 const initialState = {
-    watchlist: [],
+    watchlist: localStorage.getItem( 'watchlist' ) ? JSON.parse( localStorage.getItem( 'watchlist' ) ) : [],
     watched: []
 };
 
@@ -38,6 +38,11 @@ export const GlobalProvider = ( props ) => {
     const addMovieToWatched = ( movie ) => {
         dispatch( { type: "ADD_MOVIE_TO_WATCHED", payload: movie } );
     }
+
+    //save locall storage
+    useEffect( () => {
+        localStorage.setItem( "watchlist", JSON.stringify( state.watchlist ) );
+    }, [state] );
 
     return (
         <GlobalState.Provider value={{
