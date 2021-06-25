@@ -1,1 +1,75 @@
+@media (max-width: 767px) {
+  .head-background {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .back-text,
+  .back-img {
+    width: 95%;
+    margin: 4rem 0;
+  }
+
+  .back-img {
+    align-items: center;
+  }
+}
+
+@media (max-width: 512px) {
+  .back-text,
+  .back-img {
+    align-items: center;
+    text-align: center;
+  }
+
+  .head-text {
+    font-size: 1.8rem;
+  }
+
+  .movie-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .movie-image {
+    width: 18rem;
+  }
+
+  .movie-card .movie-detail {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .movie-info {
+    margin: 1rem 0;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movie-name {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .movie-date {
+    font-size: 1.6rem;
+  }
+
+  .movie-button {
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.6rem 0;
+    margin: 0.6rem 0;
+  }
+}

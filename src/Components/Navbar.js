@@ -23,10 +23,10 @@ const Navbar = () => {
                         <Link className="nav-link btn" to="/">اضافه کردن فیلم</Link>
                     </li>
                     <li className="nav-item" onClick={() => { handleToggler() }}>
-                        <Link className="nav-link btn" to="/watchlist">لیست فیلم ها</Link>
+                        <Link className="nav-link" to="/watchlist">لیست فیلم ها</Link>
                     </li>
                     <li className="nav-item" onClick={() => { handleToggler() }}>
-                        <Link className="nav-link btn" to="/watched">دیده شده ها</Link>
+                        <Link className="nav-link" to="/watched">دیده شده ها</Link>
                     </li>
                 </ul>
 
