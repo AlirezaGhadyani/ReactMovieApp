@@ -13,9 +13,9 @@ const HomeMovieCard = ( { movie } ) => {
     return (
         <div className="movie-card">
             {movie.poster_path ? (
-                <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} poster`} className="movie-imgage" />
+                <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} poster`} className="movie-image" />
             ) : (
-                <img src={UnknownImage} alt="poster for movies has no poster" className="movie-imgage" />
+                <img src={UnknownImage} alt="poster for movies has no poster" className="movie-image" />
             )}
             <div className="movie-detail">
                 <div className="movie-info">
